@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+if [ -z "$AOC_SESSION_COOKIE" ]; then
+    echo "AOC_SESSION_COOKIE not set"
+    exit 1
+fi
+
+if [ -z "$1" ]; then
+    current_year=$(date +"%Y")
+else
+    current_year=$1
+fi
+
+
+if [ -z "$2" ]; then
+    current_day=$(date +"%-d")
+else
+    current_day=$2
+fi
+
+day_pad=$(printf "%02d" $current_day)
+mkdir -p $current_year/$day_pad/input
+
+if [ -f $current_year/$current_day/input.txt ]; then
+    echo "Input already exists"
+    exit 0
+fi
+
+echo "Querying for https://adventofcode.com/$current_year/day/$current_day/input"
+
+curl -X GET -H "Cookie: session=$AOC_SESSION_COOKIE" \
+    https://adventofcode.com/$current_year/day/$current_day/input > $current_year/$day_pad/input/full_input.txt
