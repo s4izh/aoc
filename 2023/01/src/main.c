@@ -158,7 +158,7 @@ void first_and_last_in_line(char* line, int* first, int* last) {
 
     int num = -1;
 
-    for (int i = 0; i < strlen(line); ++i) {
+    for (size_t i = 0; i < strlen(line); ++i) {
         if (is_digit(line[i])) {
             if (*first == -1) {
                 *first = line[i] - '0';

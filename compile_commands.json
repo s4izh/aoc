@@ -1,0 +1,20 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-Wall",
+      "-Wextra",
+      "-pedantic",
+      "-g",
+      "-I./lib",
+      "./lib/my_utils.o",
+      "-o",
+      "2023/11/build/main",
+      "2023/11/src/main.c"
+    ],
+    "directory": "/home/sergio/personal/aoc",
+    "file": "/home/sergio/personal/aoc/2023/11/src/main.c",
+    "output": "/home/sergio/personal/aoc/2023/11/build/main"
+  }
+]
