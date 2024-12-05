@@ -1,0 +1,19 @@
+[
+  {
+    "arguments": [
+      "/run/current-system/sw/bin/gcc",
+      "-c",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-ggdb",
+      "-I../../include/",
+      "-o",
+      "build/main",
+      "src/main.c"
+    ],
+    "directory": "/home/sergio/personal/aoc/2023/12",
+    "file": "/home/sergio/personal/aoc/2023/12/src/main.c",
+    "output": "/home/sergio/personal/aoc/2023/12/build/main"
+  }
+]
